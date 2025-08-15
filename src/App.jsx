@@ -1,9 +1,12 @@
-import React from 'react'
+import './App.css';
+import Dashboard from './Page/Dashboard';
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <div>
+      <Dashboard />
+    </div>
+  );
 }
 
-export default App
+export default App;
