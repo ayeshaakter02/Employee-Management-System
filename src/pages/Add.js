@@ -3,50 +3,50 @@ import Swal from 'sweetalert2';
 
 function Add({ employees, setEmployees, setIsAdding }) {
 
-    // const [firstName, setFirstName] = useState('');
-    // const [lastName, setLastName] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [salary, setSalary] = useState('');
-    // const [date, setDate] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [salary, setSalary] = useState('');
+    const [date, setDate] = useState('');
 
-    // const textInput = useRef(null);
+    const textInput = useRef(null);
 
-    // useEffect(() => {
-    //     textInput.current.focus();
-    // }, [])
+    useEffect(() => {
+        textInput.current.focus();
+    }, [])
 
-    // const handleAdd = e => {
-    //     e.preventDefault();
-    //     if (!firstName || !lastName || !email || !salary || !date) {
-    //         return Swal.fire({
-    //             icon: 'error',
-    //             title: 'Error!',
-    //             text: 'All fields are required.',
-    //             showConfirmButton: true
-    //         });
-    //     }
+    const handleAdd = e => {
+        e.preventDefault();
+        if (!firstName || !lastName || !email || !salary || !date) {
+            return Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'All fields are required.',
+                showConfirmButton: true
+            });
+        }
 
-    //     const id = employees.length + 1;
-    //     const newEmployee = {
-    //         id,
-    //         firstName,
-    //         lastName,
-    //         email,
-    //         salary,
-    //         date
-    //     }
-    //     employees.push(newEmployee);
-    //     setEmployees(employees);
-    //     setIsAdding(false);
+        const id = employees.length + 1;
+        const newEmployee = {
+            id,
+            firstName,
+            lastName,
+            email,
+            salary,
+            date
+        }
+        employees.push(newEmployee);
+        setEmployees(employees);
+        setIsAdding(false);
 
-    //     Swal.fire({
-    //         icon: 'success',
-    //         title: 'Added!',
-    //         text: `${firstName} ${lastName}'s data has been Added.`,
-    //         showConfirmButton: false,
-    //         timer: 1500
-    //     });
-    // }
+        Swal.fire({
+            icon: 'success',
+            title: 'Added!',
+            text: `${firstName} ${lastName}'s data has been Added.`,
+            showConfirmButton: false,
+            timer: 1500
+        });
+    }
 
 
     return (
